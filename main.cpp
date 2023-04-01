@@ -1,35 +1,37 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 
-
-struct date
-{
-    int year;
-    int month;
-    int day;
-
-};
-
-struct times
-{
-    int hour;
-    int minute;
-    int second;
-    struct date my_date;
-};
-
 int main() {
 
-date    my_date;
-times   my_time;
+enum name {alex = 1, fedor, maxim, roman};
 
+int choose;
+cout << "choose one of the four names";
+cin >> choose;
 
-my_date.year = 1985;
-my_time.my_date.year =1995;
+    switch (choose) {
+        case alex:
+         cout << "your name alex";
+         break;
 
-cout << my_date.year << " " << my_time.my_date.year;
+        case fedor:
+            cout << "your name fedor";
+            break;
 
+        case maxim:
+            cout << "your name maxim";
+            break;
+
+        case roman:
+            cout << "your name roman";
+            break;
+
+        default:
+            cout << "not name";
+            break;
+        
+    }
     return 0;
 }
