@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-enum name {alex = 1, fedor, maxim, roman};
+enum name {alex, fedor, maxim, roman};
 
 int choose;
 cout << "choose one of the four names";
