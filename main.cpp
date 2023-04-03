@@ -46,6 +46,7 @@ struct objects
 int main() {
 
 cout << "hello world";
+cout << "footbal";
 
 
     return 0;
