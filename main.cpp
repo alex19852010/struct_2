@@ -5,12 +5,18 @@
 using namespace std;
 
 struct rooms {
-    bool bedroom;
-    bool kitchen;
-    bool bathroom;
-    bool childrenroom;
-    bool livingroom;
-    int square;
+//    bool bedroom;
+//    bool kitchen;
+//    bool bathroom;
+//    bool childrenroom;
+//    bool livingroom;
+//    int square;
+
+    enum room_type
+    {
+        living,
+        children,
+        };
 };
 
 struct floors {
@@ -72,19 +78,34 @@ int main() {
 
     }
 
+    cout << "enter the square house: ";
+    cin >> var.house.square;
+
+    cout << "enter the height floors: ";
+    cin >> var.house.floor[0].ceil_height;
+
+
+
     my_object.push_back(var);
 
     if (var.store.available) {
-        cout << "the bar square: " << my_object[0].store.square << ", ";
+        cout << "the bar square: " << my_object[0].store.square << endl;
     }
 
     if (var.garage.available) {
-        cout << "the garage square: " << my_object[0].garage.square << ", ";
+        cout << "the garage square: " << my_object[0].garage.square << endl;
     }
 
     if (var.bar.available) {
-        cout << "the bar square: " << my_object[0].bar.square << ", ";
+        cout << "the bar square: " << my_object[0].bar.square << endl;
     }
+
+    cout << "the house square: " << my_object[0].house.square << ", ";
+    cout << "the floor height: "  << my_object[0].house.floor[0].ceil_height << ", ";
+
+
+
+
 
     return 0;
 }
