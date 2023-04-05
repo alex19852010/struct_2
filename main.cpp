@@ -5,18 +5,9 @@
 using namespace std;
 
 struct rooms {
-//    bool bedroom;
-//    bool kitchen;
-//    bool bathroom;
-//    bool childrenroom;
-//    bool livingroom;
-//    int square;
 
-    enum room_type
-    {
-        living,
-        children,
-        };
+    string type;
+
 };
 
 struct floors {
@@ -84,6 +75,54 @@ int main() {
     cout << "enter the height floors: ";
     cin >> var.house.floor[0].ceil_height;
 
+    cout << "enter the type room: bedroom, kitchen, bathroom, childrenroom, livingroom: ";
+    string title = "";
+    int count = 0;
+    cin >> title;
+
+    if (title == "bedroom") {
+        count = 1;
+    }
+
+    if (title == "kitchen") {
+        count = 2;
+    }
+
+    if (title == "bathroom") {
+        count = 3;
+    }
+
+    if (title == "childrenroom") {
+        count = 4;
+    }
+
+    if (title == "livingroom") {
+        count = 5;
+    }
+
+    enum state {
+        bedroom = 1, kitchen, bathroom, childrenroom, livingroom
+    };
+
+    if (count == bedroom) {
+        var.house.floor[0].room[0].type = "bedroom";
+    }
+
+    if (count == kitchen) {
+        var.house.floor[0].room[0].type = "kitchen";
+    }
+
+    if (count == bathroom) {
+        var.house.floor[0].room[0].type = "bathroom";
+    }
+
+    if (count == childrenroom) {
+        var.house.floor[0].room[0].type = "childrenroom";
+    }
+
+    if (count == livingroom) {
+        var.house.floor[0].room[0].type = "livingroom";
+    }
 
 
     my_object.push_back(var);
@@ -101,10 +140,8 @@ int main() {
     }
 
     cout << "the house square: " << my_object[0].house.square << ", ";
-    cout << "the floor height: "  << my_object[0].house.floor[0].ceil_height << ", ";
-
-
-
+    cout << "the floor height: " << my_object[0].house.floor[0].ceil_height << ", ";
+    cout << "the type room : " << my_object[0].house.floor[0].room[0].type << ", ";
 
 
     return 0;
